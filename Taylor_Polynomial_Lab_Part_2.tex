@@ -1,0 +1,228 @@
+\documentclass{beamer}
+% Make sure to run this file with PDFLatex.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not change the next few lines.
+\usepackage{graphicx, amsfonts, amssymb, amsthm}
+ \setbeamercolor{alerted text}{fg=magenta}
+% \setbeamercolor{alerted text}{fg=blue}
+% \setbeamercolor{alerted text}{fg=green}
+% \setbeamercolor{alerted text}{fg=yellow}
+% \setbeamercolor{alerted text}{fg=cyan}
+% \setbeamercolor{alerted text}{fg=gray}
+% \setbeamercolor{alerted text}{fg=orange}
+% \setbeamercolor{alerted text}{fg=violet}
+% \setbeamercolor{alerted text}{fg=purple}
+%\setbeamercolor{alerted text}{fg=brown}
+% \xdefinecolor{lavendar}{rgb}{0.8,0.6,1}
+% \setbeamercolor{alerted text}{fg=lavendar}
+\newcommand{\singleslidebig}[1]{\begin{frame}
+\begin{center}
+\textcolor{blue}{\Huge{#1}}
+\end{center}
+\end{frame}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The beamerthemesplit package is a slide style. You can use it if you like.
+% The same with the different themes. You can experiment to see which you like best.
+\usepackage{beamerthemesplit}
+% \usetheme{default}
+% \usetheme{Boadilla}
+% \usetheme{Madrid}
+% \usetheme{Montpellier}
+%\usetheme{Warsaw}
+
+% \usetheme{Copenhagen}
+\usetheme{CambridgeUS}
+
+% \usetheme{Goettingen}
+% \usetheme{Hannover}
+\usetheme{Berkeley}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now Start entering your information.
+\title{Taylor Polynomials \\ Arctangent}
+
+
+\author[Calculus Labs]{{\textbf{Worcester Polytechnic Institute}\\ Department of Mathematical Sciences}}
+\institute[WPI]
+{Calculus Labs}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+%%%%%%
+%\begin{frame}
+%\frametitle{Outline}
+%\tableofcontents% Remove the [pausesections] if you want the whole list to show up at once
+%\end{frame}
+%%%%%%
+
+%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Maclaurin Series for $\arctan u$} 
+\section{Arctangent}
+$\displaystyle \frac{d \arctan(u)}{du} = \frac{1}{1+u^2}$ \newline
+
+\vspace{0.3 in}
+
+$\displaystyle  \frac{1}{1+u^2} =\frac{a}{1-r}$ \hspace{2 cm}- Geometric series sum \newline
+
+\vspace{0.3 in}
+
+$\displaystyle  \frac{1}{1--u^2} = \sum_{n=0}^\infty [-u^2]^n = \sum_{n=0}^\infty (-1)^n u^{2n}$ \newline
+
+\vspace{0.3 in}
+
+$ 1 -  u^2 + u^4 - u^6+\dots$  for $|u| < 1$.
+
+
+\vspace{0.5 cm}
+
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Maclaurin Series for $\arctan u$}
+
+
+$\displaystyle \arctan u = \int \frac{d \arctan u}{du} du=  \int \frac{1}{1--u^2} $ du \newline
+
+\vspace{0.1 in}
+
+$\displaystyle = \int \sum_{n=0}^\infty(-1)^n u^{2n} du= \sum_{n=0}^\infty (-1)^n  \frac{u^{2n+1}}{2n+1} + C $
+
+\vspace{0.1 in}
+
+
+$= \displaystyle \sum_{n=0}^\infty (-1)^n  \frac{u^{2n+1}}{2n+1} + C  $
+
+\vspace{0.1 in}
+
+$=\displaystyle C+  u - \frac{u^3}{3} + \frac{u^5}{5} - \frac{u^7}{7}+\dots$  for $|u| < 1$ 
+
+
+\begin{equation}
+	 \arctan u =C+  u - \frac{u^3}{3} + \frac{u^5}{5} - \frac{u^7}{7}+\dots  \textrm{ for  } |u| < 1
+\end{equation}
+
+Since $\arctan 0 = 0,  \arctan 0 =C+  0 - \frac{0^3}{3} + \frac{0^5}{5} - \frac{0^7}{7}+\dots =  0$
+
+and $C=0$.
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Maclaurin Series for $\arctan u$}
+
+
+\begin{equation}
+	 \arctan u = \sum_{n=0}^\infty (-1)^n  \frac{u^{2n+1}}{2n+1}= u - \frac{u^3}{3} + \frac{u^5}{5} - \frac{u^7}{7}+\dots  \textrm{ for  } |u| < 1
+\end{equation}
+
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Maclaurin Polynomials for $\arctan u$}
+
+
+$\displaystyle T_1(u) =u$ \newline
+\vspace{0.2 cm}
+
+$\displaystyle T_3(u) = u-\frac{u^3}{3}$ \newline
+\vspace{0.2 cm}
+
+$\displaystyle T_5(u) =u-\frac{u^3}{3} + \frac{u^5}{5} $ \newline
+
+\vspace{0.2 cm}
+
+$\displaystyle T_7(u) =u-\frac{u^3}{3} + \frac{u^5}{5}   - \frac{u^7}{7}$ \newline
+
+\vspace{0.6cm}
+
+Graph in Desmos: https://www.desmos.coms
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Substitution}
+
+\begin{equation}
+	 \arctan u = \sum_{n=0}^\infty (-1)^n  \frac{u^{2n+1}}{2n+1}= u - \frac{u^3}{3} + \frac{u^5}{5} - \frac{u^7}{7}+\dots  \textrm{ for  } |u| < 1
+\end{equation}
+
+Substitute $u=bx$ into above: \newline
+
+$ \displaystyle \arctan (bx) = \sum_{n=0}^\infty (-1)^n  \frac{(bx)^{2n+1}}{2n+1}=\sum_{n=0}^\infty (-1)^n  \frac{b^{2n+1}x^{2n+1}}{2n+1}  $ \newline
+
+\vspace{0.2 in}
+
+$\displaystyle = bx - \frac{b^3 x^3}{3} + \frac{b^5 x^5}{5} - \frac{b^7x^7}{7}+\dots $ for $|bx| < 1$ or $\displaystyle |x| < \frac{1}{|b|}$
+
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Assignment}
+\section{Lab Assignment}
+
+Lab assignment works with:
+
+\begin{equation}
+	f(u)=\ln(1+u)
+\end{equation}
+
+\vspace{0.5 in}
+\begin{equation}
+	\frac{d \ln(1+u)}{du} = \frac{1}{1+u}
+\end{equation}
+
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+\end{document}

@@ -1,0 +1,200 @@
+\documentclass{beamer}
+% Make sure to run this file with PDFLatex.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do not change the next few lines.
+\usepackage{graphicx, amsfonts, amssymb, amsthm}
+ \setbeamercolor{alerted text}{fg=magenta}
+% \setbeamercolor{alerted text}{fg=blue}
+% \setbeamercolor{alerted text}{fg=green}
+% \setbeamercolor{alerted text}{fg=yellow}
+% \setbeamercolor{alerted text}{fg=cyan}
+% \setbeamercolor{alerted text}{fg=gray}
+% \setbeamercolor{alerted text}{fg=orange}
+% \setbeamercolor{alerted text}{fg=violet}
+% \setbeamercolor{alerted text}{fg=purple}
+%\setbeamercolor{alerted text}{fg=brown}
+% \xdefinecolor{lavendar}{rgb}{0.8,0.6,1}
+% \setbeamercolor{alerted text}{fg=lavendar}
+\newcommand{\singleslidebig}[1]{\begin{frame}
+\begin{center}
+\textcolor{blue}{\Huge{#1}}
+\end{center}
+\end{frame}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The beamerthemesplit package is a slide style. You can use it if you like.
+% The same with the different themes. You can experiment to see which you like best.
+\usepackage{beamerthemesplit}
+% \usetheme{default}
+% \usetheme{Boadilla}
+% \usetheme{Madrid}
+% \usetheme{Montpellier}
+%\usetheme{Warsaw}
+
+% \usetheme{Copenhagen}
+\usetheme{CambridgeUS}
+
+% \usetheme{Goettingen}
+% \usetheme{Hannover}
+\usetheme{Berkeley}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now Start entering your information.
+\title{Plane Regions in Polar Coordinates}
+
+
+\author[Calculus Labs]{{\textbf{Worcester Polytechnic Institute}\\ Department of Mathematical Sciences}}
+\institute[WPI]
+{Calculus Labs}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+%%%%%%
+%\begin{frame}
+%\frametitle{Outline}
+%\tableofcontents% Remove the [pausesections] if you want the whole list to show up at once
+%\end{frame}
+%%%%%%
+
+%%
+
+
+\begin{frame}
+\frametitle{Area Example 1} 
+
+Using polar coordinate inequalities describe the region in the the first quadrant of the $xy$-plane that lies inside of the graph of 
+
+\begin{equation}
+	r=\sqrt{\cos \theta}.
+\end{equation}
+
+\vspace{0.5 cm}
+We plot this region using www.desmos.com/calculator
+
+
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Area Depiction}
+
+\begin{figure}[r]
+ \raggedleft
+%	\begin{center}
+	\includegraphics[scale = 0.215]{Plot2.png}
+%	\caption{$\int_a^b f(x) dx$} 
+%	\end{center}
+\end{figure}
+
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Area Example 2} 
+
+Using polar coordinate inequalities describe the region in the the $xy$-plane that lies inside of the graph of 
+
+\begin{equation}
+	r=3\sin \theta
+\end{equation}
+
+  and outside of the graph of 
+
+ \begin{equation} 
+  	r=1+ \sin \theta.
+\end{equation}
+
+
+\vspace{0.5 cm}
+We plot this region using www.desmos.com/calculator
+
+
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Area Depiction}
+
+
+\begin{figure}[r]
+ \raggedleft
+%	\begin{center}
+	\includegraphics[scale = 0.215]{Plot1.png}
+%	\caption{$\int_a^b f(x) dx$} 
+%	\end{center}
+\end{figure}
+
+
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Analytic Solution}
+We find the intersection of 
+\begin{equation}
+	r=3\sin \theta
+\end{equation}
+and
+ \begin{equation} 
+  	r=1+ \sin \theta.
+\end{equation}
+
+$\displaystyle 3 \sin \theta = 1 + \sin \theta$
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Polar Region}
+
+
+The region in the the $xy$-plane that lies inside of the graph of 
+
+\begin{equation}
+	r=3\sin \theta
+\end{equation}
+
+  and outside of the graph of 
+
+ \begin{equation} 
+  	r=1+ \sin \theta.
+\end{equation}
+can be described by
+
+\begin{equation} 
+   1 + \sin \theta \leq r \leq 	3 \sin \theta  \textrm{ and } \frac{\pi}{6} \leq \theta \leq \frac{5\pi}{6}
+\end{equation}
+
+\vspace{6.5 cm}
+\end{frame}
+
+
+
+
+\end{document}

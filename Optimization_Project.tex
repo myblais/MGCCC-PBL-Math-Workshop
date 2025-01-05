@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx,amsmath,amsfonts,amssymb,amsthm,graphics,setspace,graphicx,color}
+
+\begin{document}
+
+\begin{large}
+\noindent \textbf{Optimal Allocation of Resources Project}
+\end{large} \newline
+
+
+
+
+
+\noindent  A Vermont company named Vermont Maple Treats LLC produces two types of products: \textbf{maple sugar} and \textbf{maple syrup}. The company wants to determine the optimal weekly production quantities for each product to maximize profit, while considering constraints related to available labor hours, maple sap available, and budget.
+
+Production is subject to the following constraints:
+
+\begin{itemize}
+
+	\item Labor Hours Constraint:
+
+Each pallet of maple sugar requires 2 hours of labor, and each pallet of  maple syrup requires 3 hours. The company has 18 hours of labor available.
+
+	\item Maple Sap Constraint:
+
+Each pallet of  maple sugar requires 1 unit of maple sap,  and each pallet of  maple syrup requires 2 units of maple sap.  There are 10 units of maple sap available.
+
+	\item Budget Constraint:
+
+The company has a weekly budget of $\$20,000$.  Each pallet of  maple sugar costs $\$1,000$ to produce, while each pallet of maple syrup costs $\$2,000$ to produce.
+\end{itemize}
+
+The market prices are $\$4,000$ per pallet for sugar and $\$6,000$ per pallet for syrup.   The company needs to determine the production quantities of both products.
+
+\begin{enumerate}
+	\item Formulate this as a linear progrmaming problem using inequalities.
+	\item Plot the feasible region using the Desmos Graphing Calculator.
+	\item What quantity of each product should the company produce?
+	%\item Resources are made available to either increase the sap supply by renting more land or hiring more labor.   Add this info and then give an open ended question about what the company should do - more labor, more budget, or more sap.
+\end{enumerate}
+
+\pagebreak
+
+\textbf{Decision Variables:}
+\begin{itemize}
+    \item $x_1$: Number of pallets of  maple sugar produced
+    \item $x_2$: Number of pallets of  maple syrup produced
+\end{itemize}
+
+\textbf{Objective:} Maximize profit
+
+\[
+\text{Maximize } z = (4,000 - 1,000)x_1 + (6,000-2,000)x_2 = 3,000x_1+4,000x_2
+\]
+
+\textbf{Subject to the following constraints:}
+\[
+\begin{aligned}
+2x_1 + 3x_2 &\leq 18 \quad \text{(Labor hours constraint)} \\
+x_1 + 2x_2 &\leq 10 \quad \text{(Maple Sap constraint)} \\
+3x_1 + 2x_2 &\leq 20 \quad \text{(Budget constraint)} \\
+x_1, x_2 &\geq 0 \quad \text{(Non-negativity constraints)}
+\end{aligned}
+\]
+
+
+
+\section*{Solution}
+
+The feasible region defined by the constraints has four corner points. We evaluate the decision variables and slack variables at each corner point:
+
+\[
+%\begin{array}{|c|c|c|c|c|c|}
+\begin{array}{|c|c|c|}
+\hline
+\text{Corner Point} & x_1 & x_2 \\% & x_3 & x_4 & x_5 \\
+\hline
+(0, 0) & 0 & 0 \\% & 18 & 10 & 20 \\
+(0, 5) & 0 & 5 \\% & 3 & 0 & 10 \\
+%(4, 3) & 4 & 3 & 0 & 0 & 2 \\
+(20/3,0 ) & 20/3 & 0 \\%  & 6 & 4 & 2 \\
+(5, 2.5) & 5 & 2.5 \\% & 0.5 & 0 & 0 \\
+\hline
+\end{array}
+\]
+
+
+The optimal feasible solution occurs at the point \( (5, 2.5, 0.5,0,0) \), with
+\[
+x_1^* = 5 \textrm{ units of maple sugar, and } \quad x_2^* = 2.5 \textrm{ units of maple syrup.}
+\]
+
+\textbf{Maximum Profit:}  
+The maximum profit at this point is given by:
+
+\[
+z^* = 3,000(5) + 4,000(2.5) = 15,000 + 10,000 = \$25,000
+\]
+
+\includegraphics[scale=0.4]{iii.png}
+
+\pagebreak
+\noindent \begin{huge}Phase 2\end{huge}
+\newline
+
+\noindent  The company has resources to expand their operation with an additional $\$2,000$ per week.  With these additional funds, the company can:
+
+\begin{enumerate}
+	\item Increase the weekly budget.
+	\item Rent more land with maple trees to increase the amount of maple sap available at a price of $\$1,000$ per unit of sap per week.
+\end{enumerate}
+
+\noindent What do you recommend?
+\newline
+
+\noindent Submit a PDF file with your answer and screenshots of your Desmos work.
+
+
+\end{document}
